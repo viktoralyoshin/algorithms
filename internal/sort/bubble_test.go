@@ -4,13 +4,13 @@ import (
 	"testing"
 )
 
-func SlicesEqual(slc1, slc2 []int) bool {
-	if len(slc1) != len(slc2) {
+func SlicesEqual(arr1, arr2 []int) bool {
+	if len(arr1) != len(arr2) {
 		return false
 	}
 
-	for i := range slc1 {
-		if slc1[i] != slc2[i] {
+	for i := range arr1 {
+		if arr1[i] != arr2[i] {
 			return false
 		}
 	}
@@ -19,12 +19,12 @@ func SlicesEqual(slc1, slc2 []int) bool {
 }
 
 func TestBubbleSort(t *testing.T) {
-	slc := []int{10, 3, 52, 41, 4}
-	wantSlc := []int{3, 4, 10, 41, 52}
+	arr := []int{10, 3, 52, 41, 4}
+	wantArr := []int{3, 4, 10, 41, 52}
 
-	gotSlc := BubbleSort(slc)
+	gotArr := BubbleSort(arr)
 
-	if !SlicesEqual(gotSlc, wantSlc) {
-		t.Errorf("BubbleSort = %v, wanted = %v", gotSlc, wantSlc)
+	if !SlicesEqual(gotArr, wantArr) {
+		t.Errorf("BubbleSort = %v, wanted = %v", gotArr, wantArr)
 	}
 }
