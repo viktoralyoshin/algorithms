@@ -8,7 +8,7 @@ func TestSelectionSort(t *testing.T) {
 
 	gotArr := SelectionSort(arr)
 
-	if SlicesEqual(gotArr, wantArr) {
+	if !SlicesEqual(gotArr, wantArr) {
 		t.Errorf("Selection Sort = %v, wanted = %v", gotArr, wantArr)
 	}
 }

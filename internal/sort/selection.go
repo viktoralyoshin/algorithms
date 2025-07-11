@@ -15,7 +15,7 @@ func findSmallest(arr []int) int {
 }
 
 func SelectionSort(arr []int) []int {
-	newArr := make([]int, len(arr))
+	newArr := make([]int, 0, len(arr))
 
 	cpArr := make([]int, len(arr))
 	copy(cpArr, arr)
